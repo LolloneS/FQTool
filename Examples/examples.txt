@@ -1,0 +1,25 @@
+Here you can find some example of the tool's use.
+
+###
+fqtool -i Examples/ERR013140.filt.fastq -q 0.9 -l 30
+#
+The tool will return for each read the longest substring that has all bases probability to be correct greater than 90% if the length of this substring is >30, otherwise it will skip the read
+###
+
+###
+fqtool -i Examples/ERR013140.filt.fastq -q 35 -l 36
+#
+The tool will return for each read the longest substring that has all phread values greater than 35 if the length of this substring is >36, otherwise it will skip the read
+###
+
+###
+fqtool -i Examples/ERR013140.filt.fastq -q 0.95 -l 36 -a 0.80
+#
+The tool will return for each read whose averege probability to be correct is >80% the longest substring that has all bases probability to be correct better than 95% if the length of this substring is >36, otherwise it will skip the read
+###
+
+###
+fqtool -i Examples/ERR013140.filt.fastq -q 0.9 -l 45 -f X
+#
+The tool will return for each read the longest substring that has all bases probability to be correct better than 90% if the length of this substring is >45, otherwise it will skip the read. The phread values are conveted using the Solexia encoding standard
+###
